@@ -1,0 +1,44 @@
+.fb-chat-popup{
+    position: fixed;
+    z-index: 9999999;
+    right: 10px;
+    cursor: pointer;
+    bottom: 15px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0px 0px 25px #666;
+    background: #FFF;
+}
+.fb-chat-popup .fb-page-header {
+    background-color: #1dafec;
+    padding: 8px 10px 5px 10px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+}
+.fb-page-box .chat-single{line-height: 25px; line-height: 25px; color: #333; width: 100%;}
+.fb-page-box .chat-single a{float: right; text-decoration: none; margin-right: 10px; color: #888; font-size: 12px;}
+.fb-page-box .chat-single a:hover{color: #222;}
+@media all and (max-width: 799px) {
+    .fb-page-box{display: none;}
+    .fb-chat-popup {
+        position: fixed;
+        z-index: 9999999;
+        right: 1px;
+        cursor: pointer;bottom: 5px;
+        border: 1px solid #d1d1d1;
+        box-shadow: 0px 0px 25px #666;
+        background: #FFF;}
+}
+/*btnsearch*/
+input[type=search] {
+    width: 150px;            /* Overridden by padding: 1px; */
+    height: 20px;
+    background-color: #333;
+    color: #ffffff;
+}
+.input-search{
+    background-color: #333;
+    border: 2px ;
+    display: none;
+
+}
