@@ -11,10 +11,10 @@ $parent_menus = get_all('categories',$options_parent_menu);
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shop thời trang nam">
+    <meta name="description" content="Quán cà phê">
     <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="Shop thời trang nam"/>
+    <meta name="keywords" content="Quán cà phê"/>
     <title><?php echo isset($title) ? $title : 'Smart Shop'; ?></title>
 
         <!-- FAVICON -->

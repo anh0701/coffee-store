@@ -3,7 +3,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Quản lý cửa hàng thời trang</h1>
+                <h1 class="page-header">Quản lý quán cà phê</h1>
                 <img src="http://vimaru.edu.vn/sites/default/files/logots_1.png" alt="" style="margin: 0 520px">
             </div>
         </div>
