@@ -111,9 +111,6 @@ $contactinfo = get_a_record('contactinfo',1);
 <script src="public/asset/plugins/jquery-nice-select/js/jquery.nice-select.min.js"></script>
 <script src="public/asset/plugins/fancybox/jquery.fancybox.pack.js"></script>
 <script src="public/asset/plugins/smoothscroll/SmoothScroll.min.js"></script>
-<!-- google map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
-<script src="public/asset/plugins/google-map/gmap.js"></script>
 <script src="public/asset/js/script.js"></script>
 </body>
 </html>
