@@ -12,7 +12,7 @@ if (!empty($_POST)) {
         'alias' => alias($name),
         'Size' => escape($_POST['size']),
         'TypeId' => intval($_POST['type_id']),
-        'Price' => intval($_POST['price']),
+        'Price' => intval(preg_replace("/[^0-9]/", "", $_POST['price'])),
         'Color' => escape($_POST['color']),
         'Material' => escape($_POST['material']),
         'Createdate' => escape($_POST['createdate']),

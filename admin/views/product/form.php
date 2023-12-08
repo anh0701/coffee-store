@@ -78,7 +78,7 @@
 
             <div class="col-sm-9">
                 <input name="material" type="text" value="<?php echo $product ? $product['Material'] : ''; ?>"
-                       class="form-control" id="material" placeholder="Chất liệu" required=""/>
+                       class="form-control" id="material" placeholder="Chất liệu" />
             </div>
         </div>
 
