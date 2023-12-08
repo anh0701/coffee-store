@@ -18,7 +18,7 @@ $parent_menus = get_all('categories',$options_parent_menu);
     <title><?php echo isset($title) ? $title : 'Smart Shop'; ?></title>
 
         <!-- FAVICON -->
-    <link href="public/asset/images/favicon.png" rel="shortcut icon">
+    <link href="public/asset/images/favicon.png?v=2" rel="icon">
     <!-- PLUGINS CSS STYLE -->
     <!-- <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet"> -->
     <!-- Bootstrap -->
