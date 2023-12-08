@@ -8,7 +8,7 @@
 					<h2>Bắt đầu khám phá quán cà phê của chúng tôi</h2>
 					<ul class="list-inline mt-30">
 						<li class="list-inline-item"><a class="btn btn-warning" href="ad-listing.html">Thêm vào giỏ hàng</a></li>
-						<li class="list-inline-item"><a class="btn btn-secondary" href="category.html">Tìm hiểu thêm</a></li>
+						<li class="list-inline-item"><a class="btn btn-secondary" href="about">Tìm hiểu thêm</a></li>
 					</ul>
 				</div>
 			</div>
