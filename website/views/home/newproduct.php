@@ -3,8 +3,8 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="section-title">
-					<h2>Trending Adds</h2>
-					<p>Đây là những sản phẩm nổi bật của tuần</p>
+					<h2>Sản phẩm mới</h2>
+					<p>Đây là những sản phẩm mới của tuần</p>
 				</div>
 			</div>
 		</div>
