@@ -18,9 +18,6 @@
                                     <?php endforeach; ?>
                                 </select>
                             </div>
-                            <div class="form-group col-md-3">
-                                <input type="text" class="form-control my-2 my-lg-1  bg-transparent" id="inputLocation4" placeholder="Chọn danh mục bạn muốn tìm kiếm" disabled>
-                            </div>
                             <div class="form-group col-md-2 align-self-center">
                                 <button type="submit" class="btn btn-primary" onclick="window.location.href=this.form.action + this.form.q.value;" >Tìm kiếm</button>
                             </div>

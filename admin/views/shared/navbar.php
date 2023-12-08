@@ -170,9 +170,6 @@
                                 <a href="admin.php?controller=contactinfo">Quản lý Thông tin liên hệ</a>
                             </li>
                             <li>
-                                <a href="admin.php?controller=intro">Trang giới thiệu</a>
-                            </li>
-                            <li>
                                 <a href="admin.php?controller=advertise">Banner quảng cáo</a>
                             </li>
                         </ul>
@@ -216,27 +213,6 @@
                 <li>
                     <a href="admin.php?controller=group"><i class="fa fa-folder-open fa-fw"></i>Quản lý nhóm danh mục</a>
                 </li>
-
-
-                <!-- <li>
-                    <a href="admin.php?controller=livesport"><i class="fa fa-youtube-play fa-fw"></i> Quản lý phát video</a>
-                </li> -->
-
-                <!-- <li>
-                    <a href="admin.php?controller=comment"><i class="fa fa-comments-o fa-fw"></i>Quản lý bình luận</a>
-                </li> -->
-
-                <!-- <li>
-                    <a href="admin.php?controller=feedback"><i class="fa fa-envelope-o fa-fw"></i>Phản hồi của khách hàng</a>
-                </li> -->
-
-                <!-- <li>
-                    <a href="admin.php?controller=counter"><i class="fa fa-tasks fa-fw"></i> Thống kê online</a>
-                </li> -->
-
-                <!-- <li>
-                    <a href="index.php" target="_blank"><i class="fa fa-home fa-fw"></i>Trang chủ<span class="fa arrow"></span></a>
-                </li> -->
 
             </ul>
         </div>

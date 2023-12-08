@@ -18,7 +18,9 @@ $contactinfo = get_a_record('contactinfo',1);
         <!-- About -->
         <div class="block about">
           <!-- footer logo -->
-          <!-- <img src="public/asset/images/logo-footer.png" alt=""> -->
+          <!-- <img height="45" width="auto" src="public/asset/images/logo3.png" alt=""> -->
+          <h2 class="success">Coffee-store</h2>
+      
           <!-- description -->
           <address>
                 <p class="mb-0"><i class="fa fa-home pr-10"></i> Address: <?php echo  $contactinfo['Address']?></p>
@@ -36,24 +38,13 @@ $contactinfo = get_a_record('contactinfo',1);
         <div class="block">
           <h4>Các trang</h4>
           <ul>
-            <li><a href="intro">Về chúng tôi</a></li>
-            <li><a href="intro">Phí vận chuyển</a></li>
-            <li><a href="intro">Chính sách giao hàng</a></li>
-            <li><a href="intro">Chính sách hoàn trả</a></li>
-            <li><a href="intro">Quy định</a></li>
+            <li><a href="about">Về chúng tôi</a></li>
+            <li><a href="contact">Liên hệ</a></li>
           </ul>
         </div>
       </div>
       <!-- Link list -->
       <div class="col-lg-2 col-md-3 offset-md-1 offset-lg-0">
-        <div class="block">
-          <h4>Admin Pages</h4>
-          <ul>
-            <li><a href="intro">Giỏ hàng</a></li>
-            <li><a href="intro">Sản phẩm</a></li>
-            <li><a href="intro">Cửa hàng</a></li>
-          </ul>
-        </div>
       </div>
       <!-- Promotion -->
       <div class="col-lg-4 col-md-7">

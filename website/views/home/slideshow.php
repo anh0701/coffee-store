@@ -17,25 +17,6 @@ $parent_menus = get_all('categories',$options_parent_menu);
 					<p> 
                         <br>Chúng tôi luôn dem đến trải nghiệm tuyệt vời nhất cho khách hàng.
                     </p>
-					<!-- <div class="short-popular-category-list text-center">
-						<h2>Danh mục phổ biến</h2>
-						<ul class="list-inline">
-							<li class="list-inline-item">
-								<a href="home"><i class="fa fa-bed"></i> iPhone</a></li>
-							<li class="list-inline-item">
-								<a href="home"><i class="fa fa-android" aria-hidden="true"></i></i> Samsung</a>
-							</li>
-							<li class="list-inline-item">
-								<a href="home"><i class="fa fa-android" aria-hidden="true"></i> Xiaomi</a>
-							</li>
-							<li class="list-inline-item">
-								<a href="home"><i class="fa fa-android" aria-hidden="true"></i> Oppo</a>
-							</li>
-							<li class="list-inline-item">
-								<a href="home"><i class="fa fa-android" aria-hidden="true"></i> Sony</a>
-							</li>
-						</ul>
-					</div> -->
 				</div>
 				<!-- Advance Search -->
 				<div class="advance-search">

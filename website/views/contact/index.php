@@ -21,7 +21,6 @@
                 <div class="contact-us-content p-4">
                     <h5>Liên hệ với chúng tôi</h5>
                     <h1 class="pt-3">Xin chào, bạn đang nghĩ gì vậy?</h1>
-                    <p class="pt-3 pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, blandit vel euismod ac, lentesque et dolor. Ut id tempus ipsum.</p>
                 </div>
             </div>
             <div class="col-md-6">

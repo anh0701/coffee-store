@@ -64,16 +64,6 @@ $parent_menus = get_all('categories',$options_parent_menu);
                                     <?php endforeach; ?>
 								</div>
 							</li>
-							<li class="nav-item dropdown dropdown-slide">
-								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Cửa hàng <span><i class="fa fa-angle-down"></i></span>
-								</a>
-								<!-- Dropdown list -->
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="intro">Về chúng tôi</a>
-									<a class="dropdown-item" href="contact">Liên hệ</a>
-								</div>
-							</li>
 							<li class="nav-item">
                                 <a class="nav-link" href="about">Thành viên</span></a>
                             </li>
