@@ -2,8 +2,8 @@
 <?php
 $keyword = $_GET["id"];
 
-if (isset($_GET['page'])) {$page = intval($_GET['page'])};
-else {$page = 1};
+if (isset($_GET['page'])) {$page = intval($_GET['page']);}
+else {$page = 1;}
 
 $page = ($page > 0) ? $page : 1;
 $limit = 15;
