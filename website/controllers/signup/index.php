@@ -5,7 +5,8 @@ if (!empty($_POST)) {
     $email = escape($_POST['email']);
     if($_POST['password1'] == $_POST['password2']){   
         $password = md5($_POST['password1']);
-        user_signup($email, $password);
+        $name = $_POST['name'];
+        user_signup($email, $name, $password);
         header('location:login');
         // user_login($email, $password);
     }
