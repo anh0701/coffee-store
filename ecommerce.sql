@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2023 at 03:30 AM
+-- Generation Time: Dec 09, 2023 at 11:21 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -266,7 +266,8 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`Id`, `Customer`, `Address`, `Phone`, `Createtime`, `Status`, `Email`, `Cart_total`) VALUES
 (34, 'user', 'hanoi', '0945802194', '2021-12-05 21:56:48', 1, '', 3113470),
-(35, 'admin', 'hanoi', '0945802194', '2021-12-11 23:45:58', 1, '', 16);
+(35, 'admin', 'hanoi', '0945802194', '2021-12-11 23:45:58', 1, '', 16),
+(38, 'user', 'HP', '0123456789', '2023-12-05 09:44:13', 0, '', 40000);
 
 -- --------------------------------------------------------
 
@@ -289,7 +290,9 @@ CREATE TABLE `order_detail` (
 
 INSERT INTO `order_detail` (`Id`, `OrderId`, `ProductId`, `Quantity`, `Price`, `Description`) VALUES
 (43, 34, 200, 1, 3113470, ''),
-(44, 35, 49, 4, 4, '');
+(44, 35, 49, 4, 4, ''),
+(48, 38, 213, 1, 20000, ''),
+(49, 38, 214, 1, 20000, '');
 
 -- --------------------------------------------------------
 
@@ -329,11 +332,12 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`Id`, `Name`, `TypeId`, `CategoryId`, `SubCategoryId`, `SupplyId`, `Description`, `Price`, `Color`, `Material`, `Size`, `Detail`, `CreateBy`, `Createdate`, `EditBy`, `EditDate`, `TotalView`, `isSaleOff`, `Percent_off`, `Image1`, `Image2`, `Image3`, `Image4`, `alias`) VALUES
-(212, 'Bánh Tiramisu', 1, 6, 12, 1, '', 20000, 'nâu', 'kem', 'small', NULL, NULL, '0000-00-00', NULL, NULL, -2, 0, 0, 'product1212-banh-tiramisu.jpg', NULL, '2', '3', 'banh-tiramisu'),
-(213, 'Bánh flan', 1, 6, 12, NULL, '', 20000, 'nâu đậm', 'trứng', 'small', NULL, NULL, '0000-00-00', NULL, NULL, -3, 0, 0, 'product1213-banh-flan.jpg', NULL, '2', '3', 'banh-flan'),
-(214, 'Cà phê phin', 2, 7, 12, NULL, '', 20000, 'nâu', 'cà phê', '100ml', NULL, NULL, '2023-11-29', NULL, NULL, -12, 0, 0, 'product1214-ca-phe-phin.jpg', NULL, '', '', 'ca-phe-phin'),
-(215, 'Nước ép táo', 1, 8, 12, NULL, '', 30000, 'vàng nâu', 'táo ', '700ml', NULL, NULL, '0000-00-00', NULL, NULL, -1, 1, 2, 'product1215-nuoc-ep-tao.jpg', NULL, '', '', 'nuoc-ep-tao'),
-(216, 'Cà phê truyền thống', 1, 7, 12, NULL, '', 30000, 'nâu đậm', 'cà phê', '100ml', NULL, NULL, '0000-00-00', NULL, NULL, -19, 0, 0, 'product1216-ca-phe-truyen-thong.jpg', 'product2216-ca-phe-truyen-thong.jpg', 'product3216-ca-phe-truyen-thong.jpg', 'product4216-ca-phe-truyen-thong.jpg', 'ca-phe-truyen-thong');
+(212, 'Bánh Tiramisu', 1, 6, 12, 1, '', 20000, 'nâu', 'kem', 'small', NULL, NULL, '0000-00-00', NULL, NULL, 987, 0, 0, 'product1212-banh-tiramisu.jpg', NULL, '2', '3', 'banh-tiramisu'),
+(213, 'Bánh flan', 1, 6, 12, 1, '', 20000, 'nâu đậm', 'trứng', 'small', NULL, NULL, '0000-00-00', NULL, NULL, 1000, 0, 0, 'product1213-banh-flan.jpg', NULL, '2', '3', 'banh-flan'),
+(214, 'Cà phê phin', 1, 7, 12, 1, '', 20000, 'nâu', 'cà phê', '100ml', NULL, NULL, '2023-11-29', NULL, NULL, 73, 0, 0, 'product1214-ca-phe-phin.jpg', NULL, '', '', 'ca-phe-phin'),
+(215, 'Nước ép táo', 1, 8, 12, NULL, '', 30000, 'vàng nâu', 'táo ', '700ml', NULL, NULL, '0000-00-00', NULL, NULL, 999, 1, 2, 'product1215-nuoc-ep-tao.jpg', NULL, '', '', 'nuoc-ep-tao'),
+(216, 'Cà phê truyền thống', 1, 7, 12, NULL, '', 30000, 'nâu đậm', 'cà phê', '100ml', NULL, NULL, '0000-00-00', NULL, NULL, 998, 0, 0, 'product1216-ca-phe-truyen-thong.jpg', 'product2216-ca-phe-truyen-thong.jpg', 'product3216-ca-phe-truyen-thong.jpg', 'product4216-ca-phe-truyen-thong.jpg', 'ca-phe-truyen-thong'),
+(217, 'Banh Tiramisu', 3, 6, 12, NULL, '', 100000, 'nau', '', '', NULL, NULL, '2023-12-08', NULL, NULL, -2, 1, 10, 'product1217-banh-tiramisu.jpg', NULL, NULL, NULL, 'banh-tiramisu');
 
 -- --------------------------------------------------------
 
@@ -465,16 +469,19 @@ CREATE TABLE `user` (
   `Avatar` varchar(550) DEFAULT NULL,
   `Email` varchar(250) DEFAULT NULL,
   `Phone` varchar(20) DEFAULT NULL,
-  `Address` varchar(200) DEFAULT NULL
+  `Address` varchar(200) DEFAULT NULL,
+  `reset_token_hash` varchar(255) DEFAULT NULL,
+  `reset_token_expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`Id`, `Username`, `Password`, `Name`, `CreateDate`, `RoleId`, `Avatar`, `Email`, `Phone`, `Address`) VALUES
-(33, 'admin', 'c4ca4238a0b923820dcc509a6f75849b', 'anh', NULL, 1, NULL, 'admin@gmail.com', NULL, NULL),
-(34, 'ad@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', NULL, '2023-11-29', 1, NULL, 'ad@gmail.com', NULL, NULL);
+INSERT INTO `user` (`Id`, `Username`, `Password`, `Name`, `CreateDate`, `RoleId`, `Avatar`, `Email`, `Phone`, `Address`, `reset_token_hash`, `reset_token_expires_at`) VALUES
+(33, 'admin', 'c4ca4238a0b923820dcc509a6f75849b', 'anh', NULL, 1, NULL, 'admin@gmail.com', NULL, NULL, NULL, NULL),
+(34, 'ad@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', NULL, '2023-11-29', 1, NULL, 'ad@gmail.com', NULL, NULL, NULL, NULL),
+(35, 'user', 'c4ca4238a0b923820dcc509a6f75849b', 'Anh', NULL, 2, NULL, 'user@gmail.com', NULL, 'HP', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -495,7 +502,8 @@ CREATE TABLE `user_online` (
 --
 
 INSERT INTO `user_online` (`session`, `time`, `ip`, `browser`, `dateonline`) VALUES
-('b3j20qtgt0u568b1dvp7d35114', 1701743405, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-05');
+('dpi20vtgjaap850hf8i0omon6r', 1702116669, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-09'),
+('o4pc2mv12sojpq6fd4knk5a91i', 1702116351, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-09');
 
 -- --------------------------------------------------------
 
@@ -526,7 +534,14 @@ INSERT INTO `visiter` (`Id`, `session`, `time`, `ip`, `browser`, `dateonline`) V
 (92, 'fbn570qdpmkj63jrq1g2bos265', 1701408473, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-01'),
 (93, 'd6hv2d99g7ple4rh7u7cni17od', 1701528938, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-02'),
 (94, 'p9l8b9l3ntfok5663b983rn60c', 1701529401, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-02'),
-(95, 'b3j20qtgt0u568b1dvp7d35114', 1701742223, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-05');
+(95, 'b3j20qtgt0u568b1dvp7d35114', 1701742223, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-05'),
+(96, '4u9ltvn4jf5ucloqrhrd37gqs5', 1701743686, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-05'),
+(97, '4vo56vucj652btq26m1tfb7004', 1701997854, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-08'),
+(98, 'c8rp70n4ensa1so9t4cceqg1np', 1702005319, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-08'),
+(99, '2osn1tot5a4sf22sfn5f6kc3hd', 1702009232, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-08'),
+(100, 'ut13c0rlrufghc9h4obsjjjvrh', 1702010314, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-08'),
+(101, 'o4pc2mv12sojpq6fd4knk5a91i', 1702100576, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-09'),
+(102, 'dpi20vtgjaap850hf8i0omon6r', 1702116387, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb', '2023-12-09');
 
 --
 -- Indexes for dumped tables
@@ -658,6 +673,8 @@ ALTER TABLE `type`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`Id`),
+  ADD UNIQUE KEY `reset_token_hash` (`reset_token_hash`),
+  ADD UNIQUE KEY `reset_token_expires_at` (`reset_token_expires_at`),
   ADD KEY `FK_User_Role` (`RoleId`);
 
 --
@@ -746,19 +763,19 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=217;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=218;
 
 --
 -- AUTO_INCREMENT for table `role`
@@ -794,13 +811,13 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `visiter`
 --
 ALTER TABLE `visiter`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
 -- Constraints for dumped tables

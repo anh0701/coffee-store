@@ -15,7 +15,7 @@
                                     <label for="keep-me-logged-in" class="pt-3 pb-2">Giữ đăng nhập</label>
                             </div>
                             <button type="submit" class="d-block py-3 px-5 bg-warning text-white border-0 rounded font-weight-bold mt-3">Đăng nhập</button>
-                            <a class="mt-3 d-block  text-warning" href="#">Quên mật khẩu</a>
+                            <a class="mt-3 d-block  text-warning" href="website/views/reset-password">Quên mật khẩu</a>
                             <a class="mt-3 d-inline-block text-warning" href="signup">Đăng kí</a>
                         </fieldset>
                     </form>
