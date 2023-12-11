@@ -9,6 +9,7 @@
                     <form method="post" action="index.php?controller=signup&action=index">
                         <fieldset class="p-4">
                             <input type="text" placeholder="Nhập E-mail" name="email" type="email" autofocus class="border p-3 w-100 my-2">
+                            <input type="text" placeholder="Nhập Username" name="username" type="text" autofocus class="border p-3 w-100 my-2">
                             <input type="text" placeholder="Nhập tên" name="name" type="text" autofocus class="border p-3 w-100 my-2">
                             <input type="password" placeholder="Nhập mật khẩu" name="password1" type="password" class="border p-3 w-100 my-2">
                             <input type="password" placeholder="Nhập lại mật khẩu" name="password2" type="password" class="border p-3 w-100 my-2">
