@@ -6,7 +6,7 @@
 			<div class="col-md-12">
 				<!-- Advance Search -->
 				<div class="advance-search">
-                    <form  action="http://localhost/coffee-store/search/" method="get" onsubmit="return false;">
+                    <form  action="http://localhost/coffee-store/search/" method="get">
                         <div class="form-row">
                             <div class="form-group col-md-7">
                                 <input type="text" class="form-control my-2 my-lg-1 bg-transparent" name='q' id='q' placeholder="Nhập từ khoá">

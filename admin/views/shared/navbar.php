@@ -210,9 +210,9 @@
                     <a href="admin.php?controller=category"><i class="fa fa-folder-open fa-fw"></i>Quản lý danh mục sản phẩm</a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="admin.php?controller=group"><i class="fa fa-folder-open fa-fw"></i>Quản lý nhóm danh mục</a>
-                </li>
+                </li> -->
 
             </ul>
         </div>
