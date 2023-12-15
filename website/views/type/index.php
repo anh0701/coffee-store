@@ -19,7 +19,7 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-2 align-self-center">
-                                <button type="submit" class="btn btn-primary" onclick="window.location.href=this.form.action + this.form.q.value;" >Tìm kiếm</button>
+                                <button type="submit" class="btn btn-primary" onclick="window.location.href = this.form.action + this.form.q.value.replace(/ /g, '+');" >Tìm kiếm</button>
                             </div>
                         </div>
                     </form>

@@ -22,7 +22,7 @@
                                 <input type="text" class="form-control my-2 my-lg-1  bg-transparent" id="inputLocation4" placeholder="Vị trí - Hải Phòng" disabled>
                             </div> -->
                             <div class="form-group col-md-2 align-self-center">
-                                <button type="submit" class="btn btn-info " onclick="window.location.href=this.form.action + this.form.q.value;" >Tìm kiếm</button>
+                                <button type="submit" class="btn btn-info " onclick="window.location.href = this.form.action + this.form.q.value.replace(/ /g, '+');" >Tìm kiếm</button>
                             </div>
                         </div>
                     </form>

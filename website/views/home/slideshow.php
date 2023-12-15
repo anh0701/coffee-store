@@ -37,7 +37,7 @@ $parent_menus = get_all('categories',$options_parent_menu);
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-2 align-self-center">
-                                                <button type="submit" class="btn btn-warning" onclick="window.location.href=this.form.action + this.form.q.value;" >Tìm kiếm</button>
+                                                <button type="submit" class="btn btn-warning" onclick="window.location.href = this.form.action + this.form.q.value.replace(/ /g, '+');" >Tìm kiếm</button>
                                             </div>
 											<!-- <div class="form-group col-md-3">
                                                 <input type="text" class="form-control my-2 my-lg-1" id="inputLocation4" placeholder="Chọn danh mục bạn muốn tìm" disabled>
